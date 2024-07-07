@@ -1,18 +1,5 @@
 def fb(n):
-    if n % 3 == 0 and n % 5 == 0:
-        return "FizzBuzz"
-    elif n % 3 == 0:
-        return "Fizz"
-    elif n % 5 == 0:
-        return "Buzz"
-    else:
-        return ""
+    return (n % 3 == 0) * "Fizz" + (n % 5 == 0) * "Buzz" or str(n)
 
-i = 1
-while i <= 20:
-    result = fb(i)
-    if result:
-        print(i, result)
-    else:
-        print(i)
-    i = i + 1
+for i in range(1, 200):
+    print(i, fb(i))
